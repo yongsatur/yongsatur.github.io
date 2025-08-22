@@ -1,0 +1,267 @@
+@font-face {
+    font-family: 'Zighead';
+    src: url('../fonts/zighead.ttf');
+
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroy.otf');
+}
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: .5; }
+}
+
+*, html * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) #00000017;
+}
+body {
+    font-family: 'Gilroy';
+    color: var(--primary);
+    background-color: var(--white);
+}
+h1 {
+    font-family: 'Zighead';
+}
+p {
+    margin: .5rem 0;
+}
+
+.blink {
+    animation: blink 1.5s infinite alternate; 
+}
+
+header {
+    background-color: var(--primary);
+}
+header .image {
+    text-align: center;
+}
+header .image img {
+    height: 17.5rem;
+}
+
+.navigate {
+    background-color: var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1px solid #aaa;
+}
+
+.open {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1px solid #aaa;
+}
+.menu, .open {
+    display: none;
+    background: var(--primary); 
+}
+.open img {
+    height: 2.5rem;
+    margin: .75rem 0 .75rem 1.5rem;
+    opacity: .55;
+}
+.menu {
+    height: 100%; 
+    width: 0;
+    position: fixed; 
+    z-index: 3; 
+    top: 0; 
+    left: 0;
+    overflow-x: hidden; 
+    padding-top: 4.25rem; 
+    transition: 0.5s;
+}
+.menu a {
+    display: block;
+    padding: 1rem 1rem 1rem 3.5rem;
+    text-decoration: none;
+    font-size: 1.15rem;
+    opacity: .55;
+}
+.menu .close-menu {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: 2rem;
+}
+
+/* Меню-бургер */
+
+@media (width < 576px) {
+    .navigate {
+        display: none;
+    }
+    .menu, .open {
+        display: block;
+    }
+}
+ 
+.about {
+    padding: 5rem 0 4rem 0;
+    text-align: center;
+    box-shadow: 0px 5px 5px -5px rgba(23, 23, 23, .7) inset;
+}
+.about .skills {
+    padding-top: 1.5rem;
+    justify-content: center;
+}
+
+.education {
+    padding: 5rem 0 3rem 0;
+    text-align: center;
+    box-shadow: 0px -5px 5px -5px rgba(23, 23, 23, .7) inset;
+}
+.education .item {
+    margin: 2rem 0;
+}
+.education .item img {
+    height: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.creativity {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--white);
+}
+.creativity .poems {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.creativity .poems a {
+    margin: 0 1.5rem;
+}
+.creativity .poems a img {
+    height: 3.5rem;
+    padding: .75rem;
+    border-radius: .5rem;
+    background-color: var(--white);
+    transition: all 1s;
+}
+.creativity .poems a img:hover {
+    background-color: var(--secondary);
+}
+
+.projects {
+    padding: 5rem 0 3.5rem 0;
+    text-align: center;
+    box-shadow: 0px 5px 5px -5px rgba(23, 23, 23, .7) inset;
+}
+.projects .items {
+    justify-content: center;
+}
+
+.awards {
+    padding: 5rem 0;
+    text-align: center;
+    box-shadow: 0px -5px 5px -5px rgba(23, 23, 23, .7) inset;
+}
+
+.contacts {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--white);
+}
+.contacts .mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contacts .mail p img {
+    height: 1.5rem;
+    margin-right: .5rem;
+}
+.contacts .mail span {
+    margin: 0 1.5rem;
+}
+.contacts .social {
+    margin-top: 2.5rem;
+}
+.contacts .social a {
+    margin: 0 .75rem;
+}
+.contacts .social img {
+    height: 2.5rem;
+}
+@media (width < 576px) {
+    .contacts .mail {
+        display: block;
+    }
+    .contacts .mail span {
+        display: none;
+    }
+}
+
+.gallery {
+    padding: 5rem 0;
+    box-shadow: 0px 5px 5px -5px rgba(23, 23, 23, .7) inset;
+}
+.gallery img {
+    height: 20rem;
+    margin: .5rem;
+    border: 1px solid #aaa;
+}
+@media (width < 576px) {
+    .gallery img {
+        height: 15rem;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: var(--primary);
+    box-shadow: 0px -5px 5px -5px rgba(23, 23, 23, 0.7);
+}
+footer img {
+    height: 10rem;
+}
+footer p {
+    font-size: .75rem;
+    color: var(--white);
+    opacity: .55;
+}
+footer p:has(> a:hover) {
+    opacity: 1;
+}
+@media (width < 576px) {
+    footer img {
+        height: 7rem;
+    }
+}
+
+@media (width < 768px) {
+    .projects .container, 
+    .education .container,
+    .awards .container,
+    .navigate .container {
+        max-width: 100%;
+    }
+}
+
+/* Стрелка наверх страницы */
+
+.scrollup {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+    z-index: 2;
+}
+.scrollup:hover {
+    cursor: pointer;
+}
+@media (width < 576px) {
+    .scrollup {
+        bottom: 1.25rem;
+        right: 1.25rem;
+    }
+}

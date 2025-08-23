@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'Zighead';
-    src: url('../fonts/zighead.ttf');
+    font-family: 'zighead';
+    src: url('../fonts/zighead.woff') format('woff');;
 
-    font-family: 'Gilroy';
-    src: url('../fonts/gilroy.otf');
+    font-family: 'gilroy';
+    src: url('../fonts/gilroy.woff') format('woff');;
 }
 @keyframes blink {
     from { opacity: 1; }
@@ -15,12 +15,12 @@
     scrollbar-color: var(--primary) #00000017;
 }
 body {
-    font-family: 'Gilroy';
+    font-family: 'gilroy';
     color: var(--primary);
     background-color: var(--white);
 }
 h1 {
-    font-family: 'Zighead';
+    font-family: 'zighead';
 }
 p {
     margin: .5rem 0;

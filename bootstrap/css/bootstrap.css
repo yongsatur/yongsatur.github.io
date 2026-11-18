@@ -129,6 +129,9 @@ h5, .h5 {
   margin-bottom: .75rem;
   font-weight: 600;
 }
+h5 b, .h5 b {
+  color: var(--bs-secondary);
+}
 
 h6, .h6 {
   font-size: 1rem;
@@ -4290,11 +4293,12 @@ a.nav-link.active {
 
 .card-body {
   flex: 1 1 auto;
-  padding: 1rem 2rem 2rem;
+  align-content: center;
+  padding: 1rem 1.5rem 1.5rem;
 }
 @media (width < 576px) {
   .card-body {
-    padding: 0 1.5rem 1.5rem;
+    padding-top: 0;
   }
 }
 
@@ -4304,10 +4308,6 @@ a.nav-link.active {
 
 .card-subtitle {
   margin-top: -0.25rem;
-  margin-bottom: 0;
-}
-
-.card-text:last-child {
   margin-bottom: 0;
 }
 
@@ -4328,9 +4328,14 @@ a.nav-link.active {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
 
+.card-stack {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #908E8A;
+}
+
 .card-footer {
   background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid var(--primary);
 }
 .card-footer:last-child {
   border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
@@ -4373,12 +4378,11 @@ a.nav-link.active {
 .card-img-top {
   width: 25%;
   align-self: center;
-  padding: 2rem 0 1rem 0;
+  padding: 1.5rem 0 1rem 0;
 }
 @media (width < 576px) {
   .card-img-top {
     width: 20%;
-    padding: 1.5rem 0;
   }
 }
 

@@ -15,6 +15,9 @@
 .blink {
     animation: blink 1.5s infinite alternate; 
 }
+.secondary {
+    color: var(--bs-secondary);
+}
 
 header {
     background-color: var(--bs-primary);
@@ -124,6 +127,9 @@ header .image img {
 .projects .items {
     justify-content: center;
     margin-top: 3rem;
+}
+.projects a {
+    color: var(--bs-primary);
 }
 
 .awards {
